@@ -5,3 +5,8 @@
     display: block;
     margin: auto;
 }
+
+body {
+    text-align: center;
+    background-color: #CBE2F6
+}

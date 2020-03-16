@@ -24,38 +24,42 @@ app.get("/home", function(req, res){
     res.render("home.ejs");
 });
 
+
 app.get("/mercury", function(req, res){
-    var txt;
-    fs.readFile('public/txt/mercury.txt', 'utf8', function(err, data) {
-        if (err) throw err;
-        console.log(data);
-        txt = data;
-    });
+    var txt = fs.readFileSync(process.cwd()+'/public/txt/mercury.txt').toString();
     res.render("planet.ejs", {name:"mercury", img:"img/mercury.jpg", text:txt})
 });
 app.get("/venus", function(req, res){
-    res.render("planet.ejs", {name:"venus", img:"img/venus.jpg", text:"txt/venus.txt"})
+    var txt = fs.readFileSync(process.cwd()+'/public/txt/venus.txt').toString();
+    res.render("planet.ejs", {name:"venus", img:"img/venus.jpg", text:txt})
 });
 app.get("/earth", function(req, res){
-    res.render("planet.ejs", {name:"earth", img:"img/earth.jpg", text:"txt/earth.txt"})
+    var txt = fs.readFileSync(process.cwd()+'/public/txt/earth.txt').toString();
+    res.render("planet.ejs", {name:"earth", img:"img/earth.jpg", text:txt})
 });
 app.get("/mars", function(req, res){
-    res.render("planet.ejs", {name:"mars", img:"img/mars.jpg", text:"txt/mars.txt"})
+    var txt = fs.readFileSync(process.cwd()+'/public/txt/mars.txt').toString();
+    res.render("planet.ejs", {name:"mars", img:"img/mars.jpg", text:txt})
 });
 app.get("/jupiter", function(req, res){
-    res.render("planet.ejs", {name:"jupiter", img:"img/jupiter.png", text:"txt/jupiter.txt"})
+    var txt = fs.readFileSync(process.cwd()+'/public/txt/jupiter.txt').toString();
+    res.render("planet.ejs", {name:"jupiter", img:"img/jupiter.png", text:txt})
 });
 app.get("/saturn", function(req, res){
-    res.render("planet.ejs", {name:"saturn", img:"img/saturn.jpg", text:"txt/saturn.txt"})
+    var txt = fs.readFileSync(process.cwd()+'/public/txt/saturn.txt').toString();
+    res.render("planet.ejs", {name:"saturn", img:"img/saturn.jpg", text:txt})
 });
 app.get("/uranus", function(req, res){
-    res.render("planet.ejs", {name:"uranus", img:"img/uranus.jpg", text:"txt/uranus.txt"})
+    var txt = fs.readFileSync(process.cwd()+'/public/txt/uranus.txt').toString();
+    res.render("planet.ejs", {name:"uranus", img:"img/uranus.jpg", text:txt})
 });
 app.get("/neptune", function(req, res){
-    res.render("planet.ejs", {name:"neptune", img:"img/neptune.jpg", text:"txt/neptune.txt"})
+    var txt = fs.readFileSync(process.cwd()+'/public/txt/neptune.txt').toString();
+    res.render("planet.ejs", {name:"neptune", img:"img/neptune.jpg", text:txt})
 });
 app.get("/pluto", function(req, res){
-    res.render("planet.ejs", {name:"pluto", img:"img/pluto.jpeg", text:"txt/pluto.txt"})
+    var txt = fs.readFileSync(process.cwd()+'/public/txt/pluto.txt').toString();
+    res.render("planet.ejs", {name:"pluto", img:"img/pluto.jpeg", text:txt})
 });
 
 

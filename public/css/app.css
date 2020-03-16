@@ -10,3 +10,8 @@ body {
     text-align: center;
     background-color: #CBE2F6
 }
+
+.planetImage {
+    width: 100%;
+    height: auto;
+}
